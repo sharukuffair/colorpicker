@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Color Picker</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="container">
+        <h1>COLOR PICKER</h1>
+        <!--? display color -->
+        <div></div>
+        <!--? Input container  -->
+        <div>
+          <!-- Red slider container -->
+          <div>
+            <input type="range" name="" id="red" min="0" max="255" step="1" />
+            <label for="red">R</label>
+            <div>R</div>
+          </div>
+          <!-- Green slider container -->
+          <div>
+            <input type="range" name="" id="green" min="0" max="255" step="1" />
+            <label for="green">G</label>
+            <div>G</div>
+          </div>
+          <!-- Blue slider container -->
+          <div>
+            <input type="range" name="" id="blue" min="0" max="255" step="1" />
+            <label for="blue">B</label>
+            <div>B</div>
+          </div>
+        </div>
+        <!--? btn container  -->
+        <div>
+          <button>Copy</button>
+          <input type="checkbox" name="" id="hashtag" />
+          <label for="hashtag">Include # when copying</label>
+        </div>
+      </div>
+    </div>
+    <script src="source/app.js"></script>
+  </body>
+</html>
