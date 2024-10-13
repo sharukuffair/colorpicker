@@ -10,19 +10,38 @@ let redColor = 10;
 let greenColor = 10;
 let blueColor = 10;
 
-inputRed.textContent = redColor;
+let color = {
+  red: 0,
+  green: 0,
+  blue: 0,
+};
 
 inputRed.addEventListener("input", (e) => {
-  labelRed.textContent = e.target.value;
-  redColor = e.target.value;
+  const colorName = e.target.id.replace("red", "");
+  color[colorName] = e.target.value;
+  updateDisplay();
+
+  // labelRed.textContent = e.target.value;
+  // redColor = Number(e.target.value);
 });
 inputGreen.addEventListener("input", (e) => {
   labelgreen.textContent = e.target.value;
-  greenColor = e.target.value;
+  greenColor = Number(e.target.value);
 });
 inputBlue.addEventListener("input", (e) => {
   labelBlue.textContent = e.target.value;
-  blueColor = e.target.value;
+  blueColor = Number(e.target.value);
 });
 
-displayColor.textContent = redColor.textContent;
+// local
+function updateColor(e) {
+  const colorName = e.target.value;
+  color[colorName] = e.target.value;
+  updateDisplay();
+}
+
+function updateDisplay() {
+  // const colorString = ;
+  displayColor.style.backgroundColor = `rgb(${color.red}, ${color.green}, ${color.blue})`;
+  displayColor.textContent = `rgb(${color.red}, ${color.green}, ${color.blue})`;
+}
