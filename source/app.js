@@ -17,31 +17,19 @@ let color = {
 };
 
 inputRed.addEventListener("input", (e) => {
-  const colorName = e.target.id.replace("red", "");
-  color[colorName] = e.target.value;
-  updateDisplay();
-
-  // labelRed.textContent = e.target.value;
-  // redColor = Number(e.target.value);
+  labelRed.textContent = e.target.value;
+  redColor = labelRed.textContent;
+  console.log(redColor);
+  console.log(labelRed.textContent);
+  color.red = Number(e.target.value);
 });
 inputGreen.addEventListener("input", (e) => {
   labelgreen.textContent = e.target.value;
-  greenColor = Number(e.target.value);
+  color.green = Number(e.target.value);
 });
 inputBlue.addEventListener("input", (e) => {
   labelBlue.textContent = e.target.value;
-  blueColor = Number(e.target.value);
+  color.blue = Number(e.target.value);
 });
 
-// local
-function updateColor(e) {
-  const colorName = e.target.value;
-  color[colorName] = e.target.value;
-  updateDisplay();
-}
-
-function updateDisplay() {
-  // const colorString = ;
-  displayColor.style.backgroundColor = `rgb(${color.red}, ${color.green}, ${color.blue})`;
-  displayColor.textContent = `rgb(${color.red}, ${color.green}, ${color.blue})`;
-}
+document.querySelector(".test").textContent = redColor;
