@@ -6,10 +6,6 @@ const labelgreen = document.querySelector("[data-green-label]");
 const labelBlue = document.querySelector("[data-blue-label]");
 const displayColor = document.querySelector(["data-displayColor"]);
 
-let redColor = 10;
-let greenColor = 10;
-let blueColor = 10;
-
 let color = {
   red: 0,
   green: 0,
@@ -18,9 +14,6 @@ let color = {
 
 inputRed.addEventListener("input", (e) => {
   labelRed.textContent = e.target.value;
-  redColor = labelRed.textContent;
-  console.log(redColor);
-  console.log(labelRed.textContent);
   color.red = Number(e.target.value);
 });
 inputGreen.addEventListener("input", (e) => {
@@ -32,4 +25,4 @@ inputBlue.addEventListener("input", (e) => {
   color.blue = Number(e.target.value);
 });
 
-document.querySelector(".test").textContent = redColor;
+document.querySelector(".test").textContent = color.red;
