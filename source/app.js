@@ -12,17 +12,30 @@ let color = {
   blue: 0,
 };
 
-inputRed.addEventListener("input", (e) => {
-  labelRed.textContent = e.target.value;
-  color.red = Number(e.target.value);
-});
-inputGreen.addEventListener("input", (e) => {
-  labelgreen.textContent = e.target.value;
-  color.green = Number(e.target.value);
-});
-inputBlue.addEventListener("input", (e) => {
-  labelBlue.textContent = e.target.value;
-  color.blue = Number(e.target.value);
-});
+// inputRed.addEventListener("input", (e) => {
+//   labelRed.textContent = e.target.value;
+//   color.red = Number(e.target.value);
+// });
+// inputGreen.addEventListener("input", (e) => {
+//   labelgreen.textContent = e.target.value;
+//   color.green = Number(e.target.value);
+// });
+// inputBlue.addEventListener("input", (e) => {
+//   labelBlue.textContent = e.target.value;
+//   color.blue = Number(e.target.value);
+// });
 
-document.querySelector(".test").textContent = color.red;
+// console.log(color.red, color.green, color.blue);
+// document.querySelector(".test").textContent = color.red;
+
+function updateColor() {
+  labelRed.textContent = inputRed.value;
+  labelgreen.textContent = inputGreen.value;
+  labelBlue.textContent = inputBlue.value;
+  color.red = Number(inputRed.value);
+  color.green = Number(inputGreen.value);
+  color.blue = Number(inputBlue.value);
+  // displayColor.style.backgroundColor = `rgb(${color.red}, ${color.green}, ${color.blue})`;
+  // displayColor.textContent = `rgb(${color.red}, ${color.green}, ${color.blue})`;
+}
+console.log(color.red, color.green, color.blue);

@@ -11,7 +11,7 @@
       <div class="container">
         <h1>COLOR PICKER</h1>
         <!--? display color -->
-        <p data-displayColor class="test">sharuk</p>
+        <p data-displayColor class="test"></p>
         <!--? Input container  -->
         <div>
           <!-- Red slider container -->
@@ -24,6 +24,7 @@
               max="255"
               step="1"
               data-red-range
+              oninput="updateColor()"
             />
             <label for="red" data-red-label>R</label>
             <div>R</div>
@@ -38,6 +39,7 @@
               max="255"
               step="1"
               data-green-range
+              oninput="updateColor()"
             />
             <label for="green" data-green-label>G</label>
             <div>G</div>
@@ -52,6 +54,7 @@
               max="255"
               step="1"
               data-blue-range
+              oninput="updateColor()"
             />
             <label for="blue" data-blue-label>B</label>
             <div>B</div>

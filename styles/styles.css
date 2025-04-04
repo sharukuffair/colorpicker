@@ -1,0 +1,8 @@
+p[data-displayColor] {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 5px;
+  border: 1px solid black;
+  background-color: var(--color, #fff);
+}
